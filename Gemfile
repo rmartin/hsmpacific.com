@@ -57,3 +57,6 @@ gem 'fog'
 
 # Postgres support (added for Heroku)
 gem 'pg'
+
+# Associate multiple images with a single page.
+gem 'refinerycms-page-images', '~> 2.0.0'
