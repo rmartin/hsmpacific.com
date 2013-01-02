@@ -64,10 +64,4 @@ HsmpacificCom::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
-  # 
-  # # S3 bucket
-  ENV['S3_KEY']='AKIAI2O5WMQXP44JGDKA'
-  ENV['S3_SECRET']='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'
-  ENV['S3_BUCKET']='hsmpacific'
-  config.s3_backend = true
 end
