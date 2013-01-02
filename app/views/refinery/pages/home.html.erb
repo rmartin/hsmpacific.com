@@ -1,0 +1,66 @@
+<div class="container_12">
+<section id='body_content'>
+		  <!-- HEADER -->
+		<div  class="slider-frame">
+	    <div class="main_view">
+	      <div class="window">
+	        <div class="image_reel" id="slider"> 
+				<% @page.images.each_with_index do |image, index| %>
+				        <%= link_to image_tag(image.thumbnail("960x348#c").url), image.thumbnail("960x348").url %>
+				   <% end %>
+	        </div>
+	      </div>
+	      <div class="paging"> 
+			<% @page.images.each_with_index do |image, index| %>
+	      		<a href="##" rel="<%= index+1 %>"><%= index+1 %></a> 
+			<% end %>
+	      </div>
+	    </div>
+	  </div>
+			<div class="clear"></div>
+
+		  <!--<div class="grid_12"> <img src="/assets/shadow-divider-1.png" width="927" height="47" alt="Shadow" class="hr-divider"/></div>-->
+		  <!-- end .grid_12 -->
+		  <div class="grid_6"> 
+			<%=raw @page.content_for(:side_body) %>	
+		  </div>
+		  <!-- end .grid_6 -->
+		  <div class="grid_6 mission_statement">
+			<%=raw @page.content_for(:body) %>
+		  
+		  </div>
+		  <!-- end .grid_6 -->
+		  <div class="grid_12">
+
+			<h3>Exclusive Retailers</h3>
+			<div id="outerContainer">
+				<div id="imageScroller">
+					<div id="viewer" class="js-disabled">
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="AT&T Wireless"><img class="	logo" src="/assets/retailers/AT&T Wireless Logo.jpg" alt="AT&T"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Best Buy"><img class="logo" src="/assets/retailers/Best Buy Logo '08 - Copy.jpg" alt="Best Buy"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="DSW"><img class="logo" src="/assets/retailers/DSW logo.jpg" alt="DSW"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="FedEx Office"><img class="logo" src="/assets/retailers/FedEx Office LOGO.jpg" alt="FexEx"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Gamestop"><img class="logo" src="/assets/retailers/gamestop_logo.jpg" alt="GameStop"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="GNC"><img class="logo" src="/assets/retailers/GNC LOGO new.jpg" alt="GNC"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Hallmark"><img class="logo" src="/assets/retailers/Hallmark LOGO.jpg" alt="Hallmark"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="IKEA"><img class="logo" src="/assets/retailers/IKEA Logo.jpg" alt="IKEA"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="LA Fitness"><img class="logo" src="/assets/retailers/LA_Fitness New.jpg" alt="LA|Fitness"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Massage Envy"><img class="logo" src="/assets/retailers/Massage Envy LOGO.jpg" alt="AT&T"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Michaels"><img class="logo" src="/assets/retailers/michaels.jpg" alt="Best Buy"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Party City"><img class="logo" src="/assets/retailers/Party City LOGO2.jpg" alt="DSW"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Performance Bicycle"><img class="logo" src="/assets/retailers/Performance Bicycle logo.jpg" alt="FexEx"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="PetSmart"><img class="logo" src="/assets/retailers/PetSmart LOGO 2008.jpg" alt="GameStop"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Pharmaca"><img class="logo" src="/assets/retailers/Pharmaca LOGO.jpg" alt="GNC"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Quiznos"><img class="logo" src="/assets/retailers/Quiznos LOGO.jpg" alt="Hallmark"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Sally Beauty Supply"><img class="logo" src="/assets/retailers/Sally Beauty Supply LOGO.jpg" alt="IKEA"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Staples"><img class="logo" src="/assets/retailers/Staples.jpg" alt="LA|Fitness"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="SuperCuts"><img class="logo" src="/assets/retailers/SuperCuts Logo.jpg" alt="IKEA"></a>
+						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Target"><img class="logo" src="/assets/retailers/Target.jpg" alt="Target"></a>
+					</div>
+				</div>
+			</div>
+		  </div>
+		  <p>&nbsp;</p>
+		  <div class="clear"></div>
+</section>
+</div>
