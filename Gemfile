@@ -60,7 +60,6 @@ group :production do
   gem 'pg'
   # Fog allows you to use S3 assets (added for Heroku)
   gem 'fog'
-  ruby '1.9.3' 
 end
 
 # Associate multiple images with a single page.
