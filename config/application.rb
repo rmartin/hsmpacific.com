@@ -72,5 +72,7 @@ module HsmpacificCom
     ENV['S3_KEY']='AKIAI2O5WMQXP44JGDKA'
     ENV['S3_SECRET']='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'
     ENV['S3_BUCKET']='hsmpacific'
+    
+    Refinery::Core.config.s3_backend = true
   end
 end
