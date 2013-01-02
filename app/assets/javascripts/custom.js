@@ -162,17 +162,3 @@ $(document).ready(function(){
     });
     //HOME SLIDER ENDS HERE
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-

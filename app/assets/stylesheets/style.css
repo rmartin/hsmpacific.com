@@ -83,6 +83,10 @@ body .search #search:hover {background-image: url(/assets/choc/search-submit-hov
 	padding: 10px 0px;
 }
 
+#innerContent p, #innerContent li{
+	color: #666;
+}
+
 
 #viewer{
 	background-color: #fff;
@@ -1053,4 +1057,19 @@ h2 .tag {
 
 .mission_statement p{
 	font-size: 16px;
+}
+
+.profile_left li{
+	list-style-type: disc;
+	margin: 10px 10px 10px 15px;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.profile_right {
+	text-align: center;
+}
+
+.profile_right img{
+	border: 5px solid black;
 }

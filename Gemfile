@@ -64,3 +64,5 @@ end
 
 # Associate multiple images with a single page.
 gem 'refinerycms-page-images', '~> 2.0.0'
+
+gem 'refinerycms-brokers', :path => 'vendor/extensions'
