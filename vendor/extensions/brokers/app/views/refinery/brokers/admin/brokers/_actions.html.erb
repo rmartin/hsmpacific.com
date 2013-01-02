@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Brokers::Admin::BrokersController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.brokers_admin_brokers_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_brokers_admin_broker_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Brokers::Admin::BrokersController.sortable? && ::Refinery::Brokers::Broker.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Brokers"),
+                 refinery.brokers_admin_brokers_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Brokers"),
+                 refinery.brokers_admin_brokers_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

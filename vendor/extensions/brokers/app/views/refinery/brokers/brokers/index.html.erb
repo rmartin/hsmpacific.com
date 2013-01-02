@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="brokers">
+    <% @brokers.each do |broker| %>
+      <li>
+        <%= link_to broker.name, refinery.brokers_broker_path(broker) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

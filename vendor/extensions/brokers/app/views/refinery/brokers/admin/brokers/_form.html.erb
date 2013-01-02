@@ -1,0 +1,109 @@
+<%= form_for [refinery, :brokers_admin, @broker] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @broker,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :urlpath -%>
+    <%= f.text_field :urlpath  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :email -%>
+    <%= f.text_field :email  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :phone -%>
+    <%= f.text_field :phone  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :fax -%>
+    <%= f.text_field :fax  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :headshot -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :headshot_id,
+               :image => @broker.headshot,
+               :toggle_image_display => false %>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :is_active -%>
+    <%= f.number_field :is_active  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :is_broker -%>
+    <%= f.number_field :is_broker  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :rank -%>
+    <%= f.number_field :rank  -%>
+
+  </div>
+  
+  <div class='field'>
+    <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
+      <ul id='page_parts'>
+        <% [:professional_experience, :assignments, :clients, :affiliations].each_with_index do |part, part_index| %>
+          <li class='ui-state-default<%= ' ui-state-active' if part_index == 0 %>'>
+            <%= link_to t("#{part}", :scope => "activerecord.attributes.refinery/brokers/broker", :default => part.to_s.titleize), "##{part}" %>
+          </li>
+        <% end %>
+      </ul>
+      <div id='page_part_editors'>
+        <% [:professional_experience, :assignments, :clients, :affiliations].each do |part| %>
+          <div class='page_part' id='<%= part %>'>
+            <%= f.text_area part, :rows => 20, :class => 'wymeditor widest' -%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.brokers.admin.brokers.broker'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @broker.name) %>
+<% end -%>
+<% content_for :javascripts do %>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end %>
+
+</div>
+  
+
+  </div>
+  
+
+  </div>

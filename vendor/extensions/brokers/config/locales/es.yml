@@ -1,0 +1,41 @@
+es:
+  refinery:
+    plugins:
+      brokers:
+        title: Brokers
+#        article: masculino/femenino
+    brokers:
+      admin:
+        brokers:
+          actions:
+            create_new: Crear nuevo broker
+            reorder: Reordenar brokers
+            reorder_done: Reordenación de brokers completada
+          records:
+            title: Brokers
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay brokers todavía. Pulsa en "Crear nuevo Broker" para crear tu primer broker.
+          broker:
+            view_live_html: Ver este broker como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este broker
+            delete: Borrar este broker para siempre
+      brokers:
+        show:
+          other: Otros brokers
+  activerecord:
+    attributes:
+      'refinery/brokers/broker':
+        name: Name
+        urlpath: Urlpath
+        title: Title
+        email: Email
+        phone: Phone
+        fax: Fax
+        headshot: Headshot
+        professional_experience: Professional Experience
+        assignments: Assignments
+        clients: Clients
+        affiliations: Affiliations
+        is_active: Is Active
+        is_broker: Is Broker
+        rank: Rank

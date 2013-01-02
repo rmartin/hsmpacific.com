@@ -1,0 +1,37 @@
+<div class="container_12"> 
+	<div id="innerContent" class="">
+		<div class="grid_8 profile_left">
+			<section>
+			  <h3>Professional Experience</h3>
+			    <%=raw @broker.professional_experience %>
+			</section>
+			<section>
+			  <h3>Assignments</h3>
+			    <%=raw @broker.assignments %>
+			</section>
+			<section>
+			  <h3>Clients</h3>
+			    <%=raw @broker.clients %>
+			</section>
+			<section>
+			  <h3>Affiliations</h3>
+			    <%=raw @broker.affiliations %>
+			</section>
+			<h3>Available Properties</h3>		
+			<p><a href="/?event=page.properties&keyword=<%=raw @broker.urlpath %>">View <%=raw @broker.name.split(" ")[1] %>'s available properties</a></p>
+		</div>
+
+		<div class="grid_4 profile_right" >
+			<%= image_fu @broker.headshot %><br />
+			<span><%=raw @broker.name %></span>
+			<p><%=raw @broker.title %></p>
+			<p><a href="mailto:<%=raw @broker.email %>"><%=raw @broker.email %></a><br />
+			   <%=raw @broker.phone %> Phone<br />
+			   <%=raw @broker.fax %> Fax	<br />
+			</p>
+			<p><a href="/?event=page.properties&keyword=<%=raw @broker.urlpath %>">View <%=raw @broker.name.split(" ")[1] %>'s available properties</a></p>
+		</div>
+		 <p>&nbsp;</p>
+		 <div class="clear"></div>
+	</div>
+</div>

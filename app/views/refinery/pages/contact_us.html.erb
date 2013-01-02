@@ -1,0 +1,14 @@
+<% content_for :javascripts do %>
+  <%= javascript_include_tag 'http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.2' %>
+<% end %>
+<div class="container_12"> 
+	<div id="innerContent" class="">
+		<section id='body_content' class="grid_8">
+		  		<%=raw @page.content_for(:body) %>
+		</section>
+		<section id='side_body_content' class="grid_4">
+				<%=raw @page.content_for(:side_body) %>
+		</section>
+		<br style="clear:both" />
+	</div>
+</div>

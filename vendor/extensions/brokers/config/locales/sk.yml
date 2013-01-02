@@ -1,0 +1,40 @@
+sk:
+  refinery:
+    plugins:
+      brokers:
+        title: Brokers
+    brokers:
+      admin:
+        brokers:
+          actions:
+            create_new: Pridať Broker
+            reorder: Preusporiadať Brokers
+            reorder_done: Koniec radenia Brokers
+          records:
+            title: Brokers
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Brokers. Kliknite na "Pridať Broker" pre pridanie prvého broker.
+          broker:
+            view_live_html: Zobraziť náhľad broker<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť broker
+            delete: Zmazať broker
+      brokers:
+        show:
+          other: Daľšie Brokers
+  activerecord:
+    attributes:
+      'refinery/brokers/broker':
+        name: Name
+        urlpath: Urlpath
+        title: Title
+        email: Email
+        phone: Phone
+        fax: Fax
+        headshot: Headshot
+        professional_experience: Professional Experience
+        assignments: Assignments
+        clients: Clients
+        affiliations: Affiliations
+        is_active: Is Active
+        is_broker: Is Broker
+        rank: Rank

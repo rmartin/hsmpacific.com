@@ -1,0 +1,40 @@
+nb:
+  refinery:
+    plugins:
+      brokers:
+        title: Brokers
+    brokers:
+      admin:
+        brokers:
+          actions:
+            create_new: Lag en ny Broker
+            reorder: Endre rekkefølgen på Brokers
+            reorder_done: Ferdig å endre rekkefølgen Brokers
+          records:
+            title: Brokers
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Brokers enda. Klikk på "Lag en ny Broker" for å legge til din første broker.
+          broker:
+            view_live_html: Vis hvordan denne broker ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne broker
+            delete: Fjern denne broker permanent
+      brokers:
+        show:
+          other: Andre Brokers
+  activerecord:
+    attributes:
+      'refinery/brokers/broker':
+        name: Name
+        urlpath: Urlpath
+        title: Title
+        email: Email
+        phone: Phone
+        fax: Fax
+        headshot: Headshot
+        professional_experience: Professional Experience
+        assignments: Assignments
+        clients: Clients
+        affiliations: Affiliations
+        is_active: Is Active
+        is_broker: Is Broker
+        rank: Rank

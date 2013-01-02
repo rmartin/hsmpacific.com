@@ -1,0 +1,40 @@
+nl:
+  refinery:
+    plugins:
+      brokers:
+        title: Brokers
+    brokers:
+      admin:
+        brokers:
+          actions:
+            create_new: Maak een nieuwe Broker
+            reorder: Wijzig de volgorde van de Brokers
+            reorder_done: Klaar met het wijzingen van de volgorde van de Brokers
+          records:
+            title: Brokers
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Brokers. Druk op 'Maak een nieuwe Broker' om de eerste aan te maken.
+          broker:
+            view_live_html: Bekijk deze broker op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze broker
+            delete: Verwijder deze broker voor eeuwig
+      brokers:
+        show:
+          other: Andere Brokers
+  activerecord:
+    attributes:
+      'refinery/brokers/broker':
+        name: Name
+        urlpath: Urlpath
+        title: Title
+        email: Email
+        phone: Phone
+        fax: Fax
+        headshot: Headshot
+        professional_experience: Professional Experience
+        assignments: Assignments
+        clients: Clients
+        affiliations: Affiliations
+        is_active: Is Active
+        is_broker: Is Broker
+        rank: Rank
