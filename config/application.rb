@@ -65,6 +65,12 @@ module HsmpacificCom
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     
+    # enable precompile for heroku
     config.assets.initialize_on_precompile = true
+    
+    # S3 bucket
+    ENV['S3_KEY']='AKIAI2O5WMQXP44JGDKA'
+    ENV['S3_SECRET']='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'
+    ENV['S3_BUCKET']='hsmpacific'
   end
 end
