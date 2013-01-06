@@ -1,0 +1,29 @@
+<div class="container_12"> 
+	<div id="innerContent" class="">
+		<section id='body_content' class="grid_12">
+		  		<%=raw @page.content_for(:body) %>
+		  		
+		  		<div class="grid_12 portfolio gallery">
+					<% unless @tenants.blank? %>
+				      <% @tenants.each do |tenant| %>
+						<div class="grid_4 thumb">
+							<%= image_fu tenant.logo, "271x110>" %>
+							<span>
+								<h3><%=raw tenant.name %></h3>
+								<% unless tenant.brokers.blank? %>
+		      						<% tenant.brokers.each do |currBroker| %>
+										<b>Contact: <%=raw link_to currBroker.name, refinery.brokers_broker_path(currBroker) %></b><br />
+									<% end %>
+								<% end %>
+							</span>
+						</div>
+				      <% end %>
+				    <% end %>
+				</div>
+		</section>
+		<section id='side_body_content' class="grid_4">
+				<%=raw @page.content_for(:side_body) %>
+		</section>
+		<br style="clear:both" />
+	</div>
+</div>

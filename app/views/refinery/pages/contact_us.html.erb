@@ -6,18 +6,14 @@
 		<section id='body_content' class="grid_12">
 		  		<%=raw @page.content_for(:body) %>
 		  		
-		  		
 		  		<h3>Our Team</h3>
 		  		<div class=" headshot_listing">
 					<% unless @brokers.blank? %>
 				      <% @brokers.each do |currBroker| %>
-				      <div class="headshot_listing">
-					
 						<div class="grid_3 headshot">
 							<%= link_to (image_fu currBroker.headshot, :grid), refinery.brokers_broker_path(currBroker) %>
 							<%= link_to currBroker.name, refinery.brokers_broker_path(currBroker) %>
 						</div>
-
 				      <% end %>
 				    <% end %>
 				</div>

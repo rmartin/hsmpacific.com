@@ -744,11 +744,11 @@ h2 .tag {
 	padding-left: 4px;
 	background-image: url(/assets/portfolio_thumb.png);
 	background-repeat: no-repeat;
-	margin-bottom: 20px;
+	margin: 0px 10px 20px 0px;
 	-ms-interpolation-mode: bicubic;
 	position: relative; 
-
 }
+
 .portfolio .thumb img:hover {
 	/*
 	position:relative;
@@ -769,15 +769,11 @@ h2 .tag {
 }
 
 .portfolio .thumb img{
+	display:block;
 	position:absolute;
 	top:0;
 	bottom:0;
-	margin:auto;
-	padding-left: 5px;
-	text-align:center;
-	 text-align:center;
-    display:block;
-
+	margin: auto;
 }	
 
 .portfolio-sections {

@@ -33,6 +33,8 @@ Cufon.replace('.button-2', {
 });
 
 //Cufon.replace('.sf-menu a', { fontFamily: 'myriad' });
+
+
 // Gallery image hover	
 function portfolio_img_hover($hover_class){
     jQuery('.' + $hover_class).hover(function(){
@@ -46,6 +48,28 @@ function portfolio_img_hover($hover_class){
     });
 }
 */
+
+
+//Larger thumbnail preview 
+$(".thumb").hover(function() {
+	$(this).css({'z-index' : '10'});
+	$(this).addClass("hover").stop()
+	$(this).find('img').hide().stop()
+		
+	} , function() {
+	$(this).css({'z-index' : '0'});
+	$(this).removeClass("hover").stop()
+	$(this).find('img').show().stop()
+});
+
+$(document).ready(function(){
+	$('.portfolio .thumb img').each(function(x,val){
+		if(val.width){
+			$(val).css('margin-left', (296-val.width)/2)
+		}
+	});
+})
+
 
  var myMap = null;
 
