@@ -1,0 +1,2 @@
+<%= will_paginate @tenants if Refinery::Tenants::Admin::TenantsController.pageable? %>
+<%= render 'sortable_list' %>

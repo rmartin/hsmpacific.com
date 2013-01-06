@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130102022118) do
+ActiveRecord::Schema.define(:version => 20130106022425) do
 
   create_table "refinery_brokers", :force => true do |t|
     t.string   "name"
@@ -151,6 +151,14 @@ ActiveRecord::Schema.define(:version => 20130102022118) do
   add_index "refinery_roles_users", ["role_id", "user_id"], :name => "index_refinery_roles_users_on_role_id_and_user_id"
   add_index "refinery_roles_users", ["user_id", "role_id"], :name => "index_refinery_roles_users_on_user_id_and_role_id"
 
+  create_table "refinery_tenants", :force => true do |t|
+    t.string   "name"
+    t.integer  "logo_id"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "refinery_user_plugins", :force => true do |t|
     t.integer "user_id"
     t.string  "name"
@@ -190,5 +198,12 @@ ActiveRecord::Schema.define(:version => 20130102022118) do
 
   add_index "seo_meta", ["id"], :name => "index_seo_meta_on_id"
   add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], :name => "index_seo_meta_on_seo_meta_id_and_seo_meta_type"
+
+  create_table "tenant_representations", :force => true do |t|
+    t.integer  "broker_id"
+    t.integer  "tenant_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

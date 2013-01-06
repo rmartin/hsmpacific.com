@@ -10,6 +10,9 @@ module Refinery
       validates :name, :presence => true, :uniqueness => true
 
       belongs_to :headshot, :class_name => '::Refinery::Image'
+      
+      has_many :tenant_representation
+      has_many :tenants, :class_name => ::Refinery::Tenants::Tenant, :through => :tenant_representation
     end
   end
 end

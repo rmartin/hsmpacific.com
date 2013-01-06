@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Tenants::Admin::TenantsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.tenants_admin_tenants_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_tenants_admin_tenant_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Tenants::Admin::TenantsController.sortable? && ::Refinery::Tenants::Tenant.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Tenants"),
+                 refinery.tenants_admin_tenants_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Tenants"),
+                 refinery.tenants_admin_tenants_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

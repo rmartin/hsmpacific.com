@@ -1,0 +1,28 @@
+fr:
+  refinery:
+    plugins:
+      tenants:
+        title: Tenants
+    tenants:
+      admin:
+        tenants:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Tenant
+            reorder: Réordonner les Tenants
+            reorder_done: Fin de réordonnancement des Tenants
+          records:
+            title: Tenants
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Tenant. Cliquer sur "Créer un(e) nouve(au/l/lle) Tenant" pour créer votre premi(er/ère) tenant.'
+          tenant:
+            view_live_html: Voir ce(t/tte) tenant <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) tenant
+            delete: Supprimer définitivement ce(t/tte) tenant
+      tenants:
+        show:
+          other: Autres Tenants
+  activerecord:
+    attributes:
+      'refinery/tenants/tenant':
+        name: Name
+        logo: Logo

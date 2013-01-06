@@ -1,0 +1,28 @@
+nl:
+  refinery:
+    plugins:
+      tenants:
+        title: Tenants
+    tenants:
+      admin:
+        tenants:
+          actions:
+            create_new: Maak een nieuwe Tenant
+            reorder: Wijzig de volgorde van de Tenants
+            reorder_done: Klaar met het wijzingen van de volgorde van de Tenants
+          records:
+            title: Tenants
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Tenants. Druk op 'Maak een nieuwe Tenant' om de eerste aan te maken.
+          tenant:
+            view_live_html: Bekijk deze tenant op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze tenant
+            delete: Verwijder deze tenant voor eeuwig
+      tenants:
+        show:
+          other: Andere Tenants
+  activerecord:
+    attributes:
+      'refinery/tenants/tenant':
+        name: Name
+        logo: Logo

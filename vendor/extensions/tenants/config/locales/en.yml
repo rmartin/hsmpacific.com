@@ -1,0 +1,28 @@
+en:
+  refinery:
+    plugins:
+      tenants:
+        title: Tenants
+    tenants:
+      admin:
+        tenants:
+          actions:
+            create_new: Add New Tenant
+            reorder: Reorder Tenants
+            reorder_done: Done Reordering Tenants
+          records:
+            title: Tenants
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Tenants yet. Click "Add New Tenant" to add your first tenant.
+          tenant:
+            view_live_html: View this tenant live <br/><em>(opens in a new window)</em>
+            edit: Edit this tenant
+            delete: Remove this tenant forever
+      tenants:
+        show:
+          other: Other Tenants
+  activerecord:
+    attributes:
+      'refinery/tenants/tenant':
+        name: Name
+        logo: Logo

@@ -1,0 +1,28 @@
+nb:
+  refinery:
+    plugins:
+      tenants:
+        title: Tenants
+    tenants:
+      admin:
+        tenants:
+          actions:
+            create_new: Lag en ny Tenant
+            reorder: Endre rekkefølgen på Tenants
+            reorder_done: Ferdig å endre rekkefølgen Tenants
+          records:
+            title: Tenants
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Tenants enda. Klikk på "Lag en ny Tenant" for å legge til din første tenant.
+          tenant:
+            view_live_html: Vis hvordan denne tenant ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne tenant
+            delete: Fjern denne tenant permanent
+      tenants:
+        show:
+          other: Andre Tenants
+  activerecord:
+    attributes:
+      'refinery/tenants/tenant':
+        name: Name
+        logo: Logo

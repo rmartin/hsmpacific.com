@@ -1,0 +1,29 @@
+es:
+  refinery:
+    plugins:
+      tenants:
+        title: Tenants
+#        article: masculino/femenino
+    tenants:
+      admin:
+        tenants:
+          actions:
+            create_new: Crear nuevo tenant
+            reorder: Reordenar tenants
+            reorder_done: Reordenación de tenants completada
+          records:
+            title: Tenants
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay tenants todavía. Pulsa en "Crear nuevo Tenant" para crear tu primer tenant.
+          tenant:
+            view_live_html: Ver este tenant como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este tenant
+            delete: Borrar este tenant para siempre
+      tenants:
+        show:
+          other: Otros tenants
+  activerecord:
+    attributes:
+      'refinery/tenants/tenant':
+        name: Name
+        logo: Logo
