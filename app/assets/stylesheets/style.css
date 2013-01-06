@@ -876,11 +876,17 @@ h2 .tag {
 }
 .paging a:hover {font-weight: bold;}
 
+.headshot_listing .headshot{
+	margin: 0px 10px 15px 0px;
+	text-align: center;
+}
+
 .headshot_listing div.headshot img{
 	text-align: center;
 	display: block;
 	margin: 0 auto;	
-	bordeR: 5px solid black;
+	border: 5px solid black;
+	margin-bottom: 8px;
 }
 
 .headshot_listing div.headshot span{

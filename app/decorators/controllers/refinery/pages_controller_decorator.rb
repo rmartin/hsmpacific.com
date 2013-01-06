@@ -5,7 +5,7 @@ Refinery::PagesController.class_eval do
     protected
     
       def find_all_brokers
-        @brokers = Refinery::Brokers::Broker.order('rank ASC')
+        @brokers = Refinery::Brokers::Broker.all
       end
 
   end

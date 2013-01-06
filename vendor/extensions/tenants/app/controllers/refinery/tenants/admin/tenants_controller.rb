@@ -20,7 +20,6 @@ module Refinery
           
 
         def check_broker_ids
-          logger.info("Seeding all devices from admin/sensors_controller new")
           params[:tenant][:broker_ids] ||= []
         end
           
