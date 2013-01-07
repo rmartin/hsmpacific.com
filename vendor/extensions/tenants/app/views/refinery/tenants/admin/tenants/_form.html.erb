@@ -17,13 +17,17 @@
                :field => :logo_id,
                :image => @tenant.logo,
                :toggle_image_display => false %>
-
   </div>
   
-    <div class='field'>
+  <div class='field'>
     <%= f.label "Broker" -%>
 	<%= f.select "broker_ids", @brokers.collect {|x| [x.name, x.id]}, {}, :multiple => true %>
 
+  </div>
+  
+  <div class='field'>
+  	<%= f.label "Exclusive Tenant" %>
+  	Yes: <%= f.check_box :is_exclusive_tenant %>
   </div>
   
   

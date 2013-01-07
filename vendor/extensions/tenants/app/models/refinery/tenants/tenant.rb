@@ -3,7 +3,7 @@ module Refinery
     class Tenant < Refinery::Core::BaseModel
       self.table_name = 'refinery_tenants'
 
-      attr_accessible :name, :logo_id, :position, :broker_ids
+      attr_accessible :name, :logo_id, :position, :broker_ids, :is_exclusive_tenant
 
       acts_as_indexed :fields => [:name]
 

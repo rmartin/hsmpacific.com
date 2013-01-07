@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130106022425) do
+ActiveRecord::Schema.define(:version => 20130106204956) do
 
   create_table "refinery_brokers", :force => true do |t|
     t.string   "name"
@@ -155,8 +155,9 @@ ActiveRecord::Schema.define(:version => 20130106022425) do
     t.string   "name"
     t.integer  "logo_id"
     t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.boolean  "is_exclusive_tenant"
   end
 
   create_table "refinery_user_plugins", :force => true do |t|

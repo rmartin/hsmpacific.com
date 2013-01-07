@@ -36,26 +36,11 @@
 			<div id="outerContainer">
 				<div id="imageScroller">
 					<div id="viewer" class="js-disabled">
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="AT&T Wireless"><img class="	logo" src="/assets/retailers/AT&T Wireless Logo.jpg" alt="AT&T"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Best Buy"><img class="logo" src="/assets/retailers/Best Buy Logo '08 - Copy.jpg" alt="Best Buy"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="DSW"><img class="logo" src="/assets/retailers/DSW logo.jpg" alt="DSW"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="FedEx Office"><img class="logo" src="/assets/retailers/FedEx Office LOGO.jpg" alt="FexEx"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Gamestop"><img class="logo" src="/assets/retailers/gamestop_logo.jpg" alt="GameStop"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="GNC"><img class="logo" src="/assets/retailers/GNC LOGO new.jpg" alt="GNC"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Hallmark"><img class="logo" src="/assets/retailers/Hallmark LOGO.jpg" alt="Hallmark"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="IKEA"><img class="logo" src="/assets/retailers/IKEA Logo.jpg" alt="IKEA"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="LA Fitness"><img class="logo" src="/assets/retailers/LA_Fitness New.jpg" alt="LA|Fitness"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Massage Envy"><img class="logo" src="/assets/retailers/Massage Envy LOGO.jpg" alt="AT&T"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Michaels"><img class="logo" src="/assets/retailers/michaels.jpg" alt="Best Buy"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Party City"><img class="logo" src="/assets/retailers/Party City LOGO2.jpg" alt="DSW"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Performance Bicycle"><img class="logo" src="/assets/retailers/Performance Bicycle logo.jpg" alt="FexEx"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="PetSmart"><img class="logo" src="/assets/retailers/PetSmart LOGO 2008.jpg" alt="GameStop"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Pharmaca"><img class="logo" src="/assets/retailers/Pharmaca LOGO.jpg" alt="GNC"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Quiznos"><img class="logo" src="/assets/retailers/Quiznos LOGO.jpg" alt="Hallmark"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Sally Beauty Supply"><img class="logo" src="/assets/retailers/Sally Beauty Supply LOGO.jpg" alt="IKEA"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Staples"><img class="logo" src="/assets/retailers/Staples.jpg" alt="LA|Fitness"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="SuperCuts"><img class="logo" src="/assets/retailers/SuperCuts Logo.jpg" alt="IKEA"></a>
-						<a class="wrapper" href="/?event=page.tenantRepresentation" title="Target"><img class="logo" src="/assets/retailers/Target.jpg" alt="Target"></a>
+						<% unless @exclusiveTenants.blank? %>
+							<% @exclusiveTenants.each do |tenant| %>
+								<%= link_to (image_fu tenant.logo, "271x110>"), ::Refinery::Page.find(16).url %>	
+							<% end %>
+						<% end %>	
 					</div>
 				</div>
 			</div>
