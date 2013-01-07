@@ -14,3 +14,6 @@ Refinery::Brokers::Engine.load_seed
 
 # Added by Refinery CMS Tenants extension
 Refinery::Tenants::Engine.load_seed
+
+# Added by Refinery CMS Properties extension
+Refinery::Properties::Engine.load_seed

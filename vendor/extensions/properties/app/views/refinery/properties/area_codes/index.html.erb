@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="area_codes">
+    <% @area_codes.each do |area_code| %>
+      <li>
+        <%= link_to area_code.name, refinery.properties_area_code_path(area_code) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

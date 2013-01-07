@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="cities">
+    <% @cities.each do |city| %>
+      <li>
+        <%= link_to city.name, refinery.properties_city_path(city) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

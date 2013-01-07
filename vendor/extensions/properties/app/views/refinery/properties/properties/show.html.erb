@@ -1,0 +1,55 @@
+<% content_for :body_content_title do %>
+  <%= @property.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @property.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Highlights</h1>
+    <p>
+      <%=raw @property.highlights %>
+    </p>
+  </section>
+  <section>
+    <h1>Available Sf</h1>
+    <p>
+      <%=raw @property.available_sf %>
+    </p>
+  </section>
+  <section>
+    <h1>Rates</h1>
+    <p>
+      <%=raw @property.rates %>
+    </p>
+  </section>
+  <section>
+    <h1>Flyer</h1>
+    <p>
+      <% if @property.flyer.present? %>
+        <%= link_to 'flyer', @property.flyer.url %>
+      <% else %>
+        flyer
+      <% end %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="properties">
+      <% @properties.each do |property| %>
+        <li>
+          <%= link_to property.title, refinery.properties_property_path(property) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

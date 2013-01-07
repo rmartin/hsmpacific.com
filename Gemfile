@@ -67,3 +67,4 @@ gem 'refinerycms-page-images', '~> 2.0.0'
 
 gem 'refinerycms-brokers', :path => 'vendor/extensions'
 gem 'refinerycms-tenants', :path => 'vendor/extensions'
+gem 'refinerycms-properties', :path => 'vendor/extensions'

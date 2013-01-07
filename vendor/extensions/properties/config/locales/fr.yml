@@ -1,0 +1,76 @@
+fr:
+  refinery:
+    plugins:
+      cities:
+        title: Cities
+      area_codes:
+        title: Area Codes
+      properties:
+        title: Properties
+    properties:
+      admin:
+        cities:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) City
+            reorder: Réordonner les Cities
+            reorder_done: Fin de réordonnancement des Cities
+          records:
+            title: Cities
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) City. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) City" pour créer votre premi(er/ère) city.
+          city:
+            view_live_html: Voir ce(t/tte) city <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) city
+            delete: Supprimer définitivement ce(t/tte) city
+        area_codes:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Area Code
+            reorder: Réordonner les Area Codes
+            reorder_done: Fin de réordonnancement des Area Codes
+          records:
+            title: Area Codes
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Area Code. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Area Code" pour créer votre premi(er/ère) area
+              code.
+          area_code:
+            view_live_html: Voir ce(t/tte) area code <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) area code
+            delete: Supprimer définitivement ce(t/tte) area code
+        properties:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Property
+            reorder: Réordonner les Properties
+            reorder_done: Fin de réordonnancement des Properties
+          records:
+            title: Properties
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Property. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Property" pour créer votre premi(er/ère) property.
+          property:
+            view_live_html: Voir ce(t/tte) property <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) property
+            delete: Supprimer définitivement ce(t/tte) property
+      cities:
+        show:
+          other: Autres Cities
+      area_codes:
+        show:
+          other: Autres Area Codes
+      properties:
+        show:
+          other: Autres Properties
+  activerecord:
+    attributes:
+      refinery/properties/city:
+        name: Name
+      refinery/properties/area_code:
+        name: Name
+      refinery/properties/property:
+        title: Title
+        highlights: Highlights
+        available_sf: Available Sf
+        rates: Rates
+        flyer: Flyer

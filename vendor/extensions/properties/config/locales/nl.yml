@@ -1,0 +1,77 @@
+nl:
+  refinery:
+    plugins:
+      cities:
+        title: Cities
+      area_codes:
+        title: Area Codes
+      properties:
+        title: Properties
+    properties:
+      admin:
+        cities:
+          actions:
+            create_new: Maak een nieuwe City
+            reorder: Wijzig de volgorde van de Cities
+            reorder_done: Klaar met het wijzingen van de volgorde van de Cities
+          records:
+            title: Cities
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Cities. Druk op 'Maak een nieuwe City'
+              om de eerste aan te maken.
+          city:
+            view_live_html: Bekijk deze city op de website <br/><em>(opent een nieuw
+              venster)</em>
+            edit: Bewerk deze city
+            delete: Verwijder deze city voor eeuwig
+        area_codes:
+          actions:
+            create_new: Maak een nieuwe Area Code
+            reorder: Wijzig de volgorde van de Area Codes
+            reorder_done: Klaar met het wijzingen van de volgorde van de Area Codes
+          records:
+            title: Area Codes
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Area Codes. Druk op 'Maak een nieuwe Area
+              Code' om de eerste aan te maken.
+          area_code:
+            view_live_html: Bekijk deze area code op de website <br/><em>(opent een
+              nieuw venster)</em>
+            edit: Bewerk deze area code
+            delete: Verwijder deze area code voor eeuwig
+        properties:
+          actions:
+            create_new: Maak een nieuwe Property
+            reorder: Wijzig de volgorde van de Properties
+            reorder_done: Klaar met het wijzingen van de volgorde van de Properties
+          records:
+            title: Properties
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Properties. Druk op 'Maak een nieuwe Property'
+              om de eerste aan te maken.
+          property:
+            view_live_html: Bekijk deze property op de website <br/><em>(opent een
+              nieuw venster)</em>
+            edit: Bewerk deze property
+            delete: Verwijder deze property voor eeuwig
+      cities:
+        show:
+          other: Andere Cities
+      area_codes:
+        show:
+          other: Andere Area Codes
+      properties:
+        show:
+          other: Andere Properties
+  activerecord:
+    attributes:
+      refinery/properties/city:
+        name: Name
+      refinery/properties/area_code:
+        name: Name
+      refinery/properties/property:
+        title: Title
+        highlights: Highlights
+        available_sf: Available Sf
+        rates: Rates
+        flyer: Flyer

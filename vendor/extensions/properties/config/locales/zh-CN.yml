@@ -1,0 +1,71 @@
+zh-CN:
+  refinery:
+    plugins:
+      cities:
+        title: Cities
+      area_codes:
+        title: Area Codes
+      properties:
+        title: Properties
+    properties:
+      admin:
+        cities:
+          actions:
+            create_new: 建立新的 City
+            reorder: 对 Cities 重新排序
+            reorder_done: 对 Cities 的重新排序结束
+          records:
+            title: Cities
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Cities . 点击 "Add New City" 创建一个city.
+          city:
+            view_live_html: 查看 city 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 city
+            delete: 永久删除 city
+        area_codes:
+          actions:
+            create_new: 建立新的 Area Code
+            reorder: 对 Area Codes 重新排序
+            reorder_done: 对 Area Codes 的重新排序结束
+          records:
+            title: Area Codes
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Area Codes . 点击 "Add New Area Code" 创建一个area code.
+          area_code:
+            view_live_html: 查看 area code 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 area code
+            delete: 永久删除 area code
+        properties:
+          actions:
+            create_new: 建立新的 Property
+            reorder: 对 Properties 重新排序
+            reorder_done: 对 Properties 的重新排序结束
+          records:
+            title: Properties
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Properties . 点击 "Add New Property" 创建一个property.
+          property:
+            view_live_html: 查看 property 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 property
+            delete: 永久删除 property
+      cities:
+        show:
+          other: 其他 Cities
+      area_codes:
+        show:
+          other: 其他 Area Codes
+      properties:
+        show:
+          other: 其他 Properties
+  activerecord:
+    attributes:
+      refinery/properties/city:
+        name: Name
+      refinery/properties/area_code:
+        name: Name
+      refinery/properties/property:
+        title: Title
+        highlights: Highlights
+        available_sf: Available Sf
+        rates: Rates
+        flyer: Flyer

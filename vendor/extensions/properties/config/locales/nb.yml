@@ -1,0 +1,77 @@
+nb:
+  refinery:
+    plugins:
+      cities:
+        title: Cities
+      area_codes:
+        title: Area Codes
+      properties:
+        title: Properties
+    properties:
+      admin:
+        cities:
+          actions:
+            create_new: Lag en ny City
+            reorder: Endre rekkefølgen på Cities
+            reorder_done: Ferdig å endre rekkefølgen Cities
+          records:
+            title: Cities
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Cities enda. Klikk på "Lag en ny City" for
+              å legge til din første city.
+          city:
+            view_live_html: Vis hvordan denne city ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne city
+            delete: Fjern denne city permanent
+        area_codes:
+          actions:
+            create_new: Lag en ny Area Code
+            reorder: Endre rekkefølgen på Area Codes
+            reorder_done: Ferdig å endre rekkefølgen Area Codes
+          records:
+            title: Area Codes
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Area Codes enda. Klikk på "Lag en ny Area Code"
+              for å legge til din første area code.
+          area_code:
+            view_live_html: Vis hvordan denne area code ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne area code
+            delete: Fjern denne area code permanent
+        properties:
+          actions:
+            create_new: Lag en ny Property
+            reorder: Endre rekkefølgen på Properties
+            reorder_done: Ferdig å endre rekkefølgen Properties
+          records:
+            title: Properties
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Properties enda. Klikk på "Lag en ny Property"
+              for å legge til din første property.
+          property:
+            view_live_html: Vis hvordan denne property ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne property
+            delete: Fjern denne property permanent
+      cities:
+        show:
+          other: Andre Cities
+      area_codes:
+        show:
+          other: Andre Area Codes
+      properties:
+        show:
+          other: Andre Properties
+  activerecord:
+    attributes:
+      refinery/properties/city:
+        name: Name
+      refinery/properties/area_code:
+        name: Name
+      refinery/properties/property:
+        title: Title
+        highlights: Highlights
+        available_sf: Available Sf
+        rates: Rates
+        flyer: Flyer

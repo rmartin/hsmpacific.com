@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130106204956) do
+ActiveRecord::Schema.define(:version => 20130107071708) do
 
   create_table "refinery_brokers", :force => true do |t|
     t.string   "name"
@@ -128,6 +128,33 @@ ActiveRecord::Schema.define(:version => 20130106204956) do
   add_index "refinery_pages", ["lft"], :name => "index_refinery_pages_on_lft"
   add_index "refinery_pages", ["parent_id"], :name => "index_refinery_pages_on_parent_id"
   add_index "refinery_pages", ["rgt"], :name => "index_refinery_pages_on_rgt"
+
+  create_table "refinery_properties", :force => true do |t|
+    t.string   "title"
+    t.text     "highlights"
+    t.string   "available_sf"
+    t.string   "rates"
+    t.integer  "flyer_id"
+    t.integer  "position"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "city_id"
+    t.integer  "area_code_id"
+  end
+
+  create_table "refinery_properties_area_codes", :force => true do |t|
+    t.string   "name"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "refinery_properties_cities", :force => true do |t|
+    t.string   "name"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "refinery_resources", :force => true do |t|
     t.string   "file_mime_type"

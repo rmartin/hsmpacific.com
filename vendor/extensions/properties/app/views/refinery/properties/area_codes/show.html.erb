@@ -1,0 +1,27 @@
+<% content_for :body_content_title do %>
+  <%= @area_code.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @area_code.name %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="area_codes">
+      <% @area_codes.each do |area_code| %>
+        <li>
+          <%= link_to area_code.name, refinery.properties_area_code_path(area_code) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

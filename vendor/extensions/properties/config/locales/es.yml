@@ -1,0 +1,77 @@
+es:
+  refinery:
+    plugins:
+      cities:
+        title: Cities
+      area_codes:
+        title: Area Codes
+      properties:
+        title: Properties
+    properties:
+      admin:
+        cities:
+          actions:
+            create_new: Crear nuevo city
+            reorder: Reordenar cities
+            reorder_done: Reordenación de cities completada
+          records:
+            title: Cities
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay cities todavía. Pulsa en "Crear nuevo City" para
+              crear tu primer city.
+          city:
+            view_live_html: Ver este city como abierto al público <br/><em>(abre en
+              ventana nueva)</em>
+            edit: Editar este city
+            delete: Borrar este city para siempre
+        area_codes:
+          actions:
+            create_new: Crear nuevo area code
+            reorder: Reordenar area codes
+            reorder_done: Reordenación de area codes completada
+          records:
+            title: Area Codes
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay area codes todavía. Pulsa en "Crear nuevo Area Code"
+              para crear tu primer area code.
+          area_code:
+            view_live_html: Ver este area code como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este area code
+            delete: Borrar este area code para siempre
+        properties:
+          actions:
+            create_new: Crear nuevo property
+            reorder: Reordenar properties
+            reorder_done: Reordenación de properties completada
+          records:
+            title: Properties
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay properties todavía. Pulsa en "Crear nuevo Property"
+              para crear tu primer property.
+          property:
+            view_live_html: Ver este property como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este property
+            delete: Borrar este property para siempre
+      cities:
+        show:
+          other: Otros cities
+      area_codes:
+        show:
+          other: Otros area codes
+      properties:
+        show:
+          other: Otros properties
+  activerecord:
+    attributes:
+      refinery/properties/city:
+        name: Name
+      refinery/properties/area_code:
+        name: Name
+      refinery/properties/property:
+        title: Title
+        highlights: Highlights
+        available_sf: Available Sf
+        rates: Rates
+        flyer: Flyer

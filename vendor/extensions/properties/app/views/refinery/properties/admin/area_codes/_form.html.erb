@@ -1,0 +1,17 @@
+<%= form_for [refinery, :properties_admin, @area_code] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @area_code,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.area_codes.admin.area_codes.area_code'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @area_code.name) %>
+<% end -%>

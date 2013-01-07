@@ -1,0 +1,74 @@
+en:
+  refinery:
+    plugins:
+      cities:
+        title: Cities
+      area_codes:
+        title: Area Codes
+      properties:
+        title: Properties
+    properties:
+      admin:
+        cities:
+          actions:
+            create_new: Add New City
+            reorder: Reorder Cities
+            reorder_done: Done Reordering Cities
+          records:
+            title: Cities
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Cities yet. Click "Add New City" to add your
+              first city.
+          city:
+            view_live_html: View this city live <br/><em>(opens in a new window)</em>
+            edit: Edit this city
+            delete: Remove this city forever
+        area_codes:
+          actions:
+            create_new: Add New Area Code
+            reorder: Reorder Area Codes
+            reorder_done: Done Reordering Area Codes
+          records:
+            title: Area Codes
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Area Codes yet. Click "Add New Area Code" to
+              add your first area code.
+          area_code:
+            view_live_html: View this area code live <br/><em>(opens in a new window)</em>
+            edit: Edit this area code
+            delete: Remove this area code forever
+        properties:
+          actions:
+            create_new: Add New Property
+            reorder: Reorder Properties
+            reorder_done: Done Reordering Properties
+          records:
+            title: Properties
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Properties yet. Click "Add New Property" to
+              add your first property.
+          property:
+            view_live_html: View this property live <br/><em>(opens in a new window)</em>
+            edit: Edit this property
+            delete: Remove this property forever
+      cities:
+        show:
+          other: Other Cities
+      area_codes:
+        show:
+          other: Other Area Codes
+      properties:
+        show:
+          other: Other Properties
+  activerecord:
+    attributes:
+      refinery/properties/city:
+        name: Name
+      refinery/properties/area_code:
+        name: Name
+      refinery/properties/property:
+        title: Title
+        highlights: Highlights
+        available_sf: Available Sf
+        rates: Rates
+        flyer: Flyer

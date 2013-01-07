@@ -3,8 +3,6 @@ module Refinery
     module Admin
       class TenantsController < ::Refinery::AdminController
         before_filter :find_all_brokers
-        include ActiveModel::MassAssignmentSecurity
-        
        
         #before_filter :check_broker_ids, :only => [:update]
 
@@ -17,13 +15,11 @@ module Refinery
           def find_all_brokers
             @brokers = ::Refinery::Brokers::Broker.all
           end
-          
 
-        def check_broker_ids
-          params[:tenant][:broker_ids] ||= []
-        end
+          def check_broker_ids
+            params[:tenant][:broker_ids] ||= []
+          end
           
-       
       end
     end
   end

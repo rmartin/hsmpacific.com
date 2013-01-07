@@ -1,0 +1,27 @@
+<% content_for :body_content_title do %>
+  <%= @city.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @city.name %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="cities">
+      <% @cities.each do |city| %>
+        <li>
+          <%= link_to city.name, refinery.properties_city_path(city) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

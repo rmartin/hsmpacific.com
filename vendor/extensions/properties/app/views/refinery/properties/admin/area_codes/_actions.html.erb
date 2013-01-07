@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Properties::Admin::AreaCodesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.properties_admin_area_codes_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_properties_admin_area_code_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Properties::Admin::AreaCodesController.sortable? && ::Refinery::Properties::AreaCode.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Area Codes"),
+                 refinery.properties_admin_area_codes_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Area Codes"),
+                 refinery.properties_admin_area_codes_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>
