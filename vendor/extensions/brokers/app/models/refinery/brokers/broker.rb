@@ -3,9 +3,9 @@ module Refinery
     class Broker < Refinery::Core::BaseModel
       self.table_name = 'refinery_brokers'
 
-      attr_accessible :name, :urlpath, :title, :email, :phone, :fax, :headshot_id, :professional_experience, :assignments, :clients, :affiliations, :is_active, :is_broker, :rank, :position
+      attr_accessible :name, :urlpath, :title, :email, :phone, :fax, :headshot_id, :bio, :is_active, :is_broker, :rank, :position
 
-      acts_as_indexed :fields => [:name, :urlpath, :title, :email, :phone, :fax, :professional_experience, :assignments, :clients, :affiliations]
+      acts_as_indexed :fields => [:name, :urlpath, :title, :email, :phone, :fax, :bio]
 
       validates :name, :presence => true, :uniqueness => true
 
