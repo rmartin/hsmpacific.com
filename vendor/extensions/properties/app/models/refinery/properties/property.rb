@@ -3,7 +3,7 @@ module Refinery
     class Property < Refinery::Core::BaseModel
       self.table_name = 'refinery_properties'
 
-      attr_accessible :title, :highlights, :available_sf, :rates, :flyer_id, :position, :city_id, :area_code_id
+      attr_accessible :title, :highlights, :available_sf, :rates, :flyer_id, :position, :city_id, :area_code_id, :state_code, :property_type
 
       acts_as_indexed :fields => [:title, :highlights, :available_sf, :rates]
 

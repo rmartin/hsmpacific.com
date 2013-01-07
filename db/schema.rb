@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130107071708) do
+ActiveRecord::Schema.define(:version => 20130107204222) do
 
   create_table "refinery_brokers", :force => true do |t|
     t.string   "name"
@@ -136,10 +136,12 @@ ActiveRecord::Schema.define(:version => 20130107071708) do
     t.string   "rates"
     t.integer  "flyer_id"
     t.integer  "position"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.integer  "city_id"
     t.integer  "area_code_id"
+    t.string   "state_code"
+    t.string   "property_type"
   end
 
   create_table "refinery_properties_area_codes", :force => true do |t|

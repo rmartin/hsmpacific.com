@@ -37,7 +37,16 @@
   <div class='field'>
     <%= f.label "Area Codes" -%>
     <%= f.select "area_code_id", @areaCodes.collect {|x| [x.name, x.id]}, {}, :multiple => false %>
-
+  </div>
+  
+  <div class='field'>
+    <%= f.label "State" -%>
+    <%= f.select :state_code, [ 'Oregon', 'Washington' ], :prompt => 'Select One' %>
+  </div>
+  
+  <div class='field'>
+    <%= f.label "Property Type" -%>
+    <%= f.select :property_type, [ 'For Lease', 'For Sale' ], :prompt => 'Select One' %>
   </div>
   
   <div class='field'>
