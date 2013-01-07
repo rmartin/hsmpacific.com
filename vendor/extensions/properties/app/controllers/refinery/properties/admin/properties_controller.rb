@@ -5,6 +5,7 @@ module Refinery
         
         before_filter :find_all_cities
         before_filter :find_all_area_codes
+        before_filter :find_all_brokers
 
         crudify :'refinery/properties/property', :xhr_paging => true
         
@@ -16,6 +17,10 @@ module Refinery
           
           def find_all_area_codes
             @areaCodes = ::Refinery::Properties::AreaCode.all
+          end
+          
+          def find_all_brokers
+             @brokers = ::Refinery::Brokers::Broker.all
           end
 
       end

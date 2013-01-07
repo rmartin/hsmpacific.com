@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130107205433) do
+ActiveRecord::Schema.define(:version => 20130107215044) do
+
+  create_table "property_representation", :force => true do |t|
+    t.integer  "broker_id"
+    t.integer  "property_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "refinery_brokers", :force => true do |t|
     t.string   "name"

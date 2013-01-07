@@ -13,6 +13,9 @@ module Refinery
       
       has_many :tenant_representation
       has_many :tenants, :class_name => ::Refinery::Tenants::Tenant, :through => :tenant_representation
+      
+      has_many :property_representation
+      has_many :properties, :class_name => ::Refinery::Properties::Property, :through => :property_representation
     end
   end
 end

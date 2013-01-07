@@ -1,0 +1,150 @@
+<div class="container_12"> 
+    <div id="innerContent" class="">
+        <section id='body_content' class="grid_12">
+            <%=raw @page.content_for(:body) %>
+                
+            <div class="property_listing">
+                <div class="grid_12 profile_left">
+                <h3>Search</h3>
+    
+                <form class="property_search" action="/?event=page.properties" method="post">
+                    <div class="keyword group">
+                        <label>
+                            Keyword:
+                        </label>
+                        <input type="text" size="40" name="keyword" value="">
+                    </div>
+                    <div class="group">
+                        <div>
+                            <label>
+                                City:
+                            </label>
+                            <select name="city_code" class="input_select">
+                                <option value="">All</option>
+                                
+                                 
+                                
+                            </select>
+                        </div>
+                        <div>
+                            <label>
+                                Area:
+                            </label>
+                            <select name="area_code" class="input_select">
+                            <option value="">All</option>
+                            
+                              
+                            
+                        </select>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div>
+                            <label>
+                                Broker:
+                            </label>
+                            <select name="broker_id" class="input_select">
+                                <option value="">All</option>
+                                
+                                   
+                                
+                            </select>
+                        </div>
+                        <div>
+                            <label>
+                                Sale / Lease:
+                            </label>
+                            <select name="property_type" class="input_select">
+                                <option value="">All</option>
+                                
+            
+                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div>
+                            <label>
+                                State:
+                            </label>
+                            <select name="state_code" class="input_select">
+                                <option value="">All</option>
+                                
+            
+                                
+                            </select>
+                        </div>
+                        <div>
+                            <label>
+                                Sort By:
+                            </label>
+                            
+                            <select name="sort_by" class="input_select">
+                                
+                                    <option value="title" selected="selected">Title</option>
+                                    
+                                    <option value="city_code">City</option>
+                                    
+                                    <option value="area_code">Area</option>
+                                    
+                                    <option value="state_code">State</option>
+                                    
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 12px">
+                        <input type="submit" class="submit" value="Search">
+                        
+                    </div>
+                </form>
+            </div>
+  
+        <div class="grid_12 project" style=" margin: 10px;">
+    
+                <table>
+                    <thead>
+                        <tr><th colspan="2" class="property">
+                            Property
+                        </th>
+                        <th class="contact">
+                            Contact Information
+                        </th>
+                        <th class="media">
+                            Flyer
+                        </th>
+                    </tr></thead>
+                    <tbody style="clear: both">
+                        <% unless @properties.blank? %>
+                              <% @properties.each do |property| %>
+                                <tr>
+                                    <td colspan="2">
+                                        <h3></h3>
+                                        <p>  
+                                            <b>Available SF:</b><%= property.%><br>
+                                                <b>Rates:</b>
+                                                 
+                                        </p>
+                                    </td>
+                                    <td class="contact">
+                                        <br>
+                                    </td>
+                                    <td class="flyer">
+                                        
+                                    </td>
+                                </tr>
+                              <% end %>
+                       <% end %>
+                    </tbody>
+                </table>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+        </section>
+        <section id='side_body_content' class="grid_4">
+                <%=raw @page.content_for(:side_body) %>
+        </section>
+        <br style="clear:both" />
+    </div>
+</div>
