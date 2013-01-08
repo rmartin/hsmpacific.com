@@ -51,7 +51,7 @@
   
   <div class='field'>
     <%= f.label "Broker" -%>
-    
+    <%= f.select "broker_ids", @brokers.collect {|x| [x.name, x.id]}, {}, :multiple => true %>
 
   </div>
   

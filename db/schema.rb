@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20130107215044) do
 
-  create_table "property_representation", :force => true do |t|
+  create_table "property_representations", :force => true do |t|
     t.integer  "broker_id"
     t.integer  "property_id"
     t.datetime "created_at",  :null => false
