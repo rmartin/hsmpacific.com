@@ -11,12 +11,6 @@
   </div>
   
   <div class='field'>
-    <%= f.label :urlpath -%>
-    <%= f.text_field :urlpath  -%>
-
-  </div>
-  
-  <div class='field'>
     <%= f.label :title -%>
     <%= f.text_field :title  -%>
 
@@ -49,24 +43,13 @@
                :toggle_image_display => false %>
 
   </div>
-
-  <div class='field'>
-    <%= f.label :is_active -%>
-    <%= f.number_field :is_active  -%>
-
-  </div>
   
   <div class='field'>
     <%= f.label :is_broker -%>
-    <%= f.number_field :is_broker  -%>
+    <%= f.check_box :is_broker %>
 
   </div>
-  
-  <div class='field'>
-    <%= f.label :rank -%>
-    <%= f.number_field :rank  -%>
 
-  </div>
   
   <div class='field'>
     <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>

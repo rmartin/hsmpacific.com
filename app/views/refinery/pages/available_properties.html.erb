@@ -115,22 +115,25 @@
                         </th>
                     </tr></thead>
                     <tbody style="clear: both">
+                        
                         <% unless @properties.blank? %>
                               <% @properties.each do |property| %>
                                 <tr>
                                     <td colspan="2">
-                                        <h3></h3>
+                                        <h3><%= property.title %></h3>
                                         <p>  
-                                            <b>Available SF:</b><%= property.%><br>
-                                                <b>Rates:</b>
-                                                 
+                                            <b>Available SF:</b><%= property.available_sf %><br>
+                                            <b>Rates:</b><%= property.rates %>     
                                         </p>
                                     </td>
                                     <td class="contact">
+                                        <% property.brokers.each do |currBroker| %>
+                                            <%= link_to currBroker.name, refinery.brokers_broker_path(currBroker) %><br />
+                                        <% end %>
                                         <br>
                                     </td>
                                     <td class="flyer">
-                                        
+                                        <%= link_to "Download Flyer", "test" %>
                                     </td>
                                 </tr>
                               <% end %>

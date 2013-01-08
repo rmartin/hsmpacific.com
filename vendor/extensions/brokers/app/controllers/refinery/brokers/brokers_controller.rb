@@ -22,7 +22,7 @@ module Refinery
     protected
 
       def find_all_brokers
-        @brokers = Broker.order('rank ASC')
+        @brokers = Broker.all
       end
 
       def find_page

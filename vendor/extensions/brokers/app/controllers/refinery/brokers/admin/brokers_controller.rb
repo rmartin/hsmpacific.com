@@ -6,8 +6,7 @@ module Refinery
         crudify :'refinery/brokers/broker',
                 :title_attribute => 'name', 
                 :xhr_paging => true,
-                :order => "rank ASC",
-                :sortable => false
+                :sortable => true
       end
     end
   end
