@@ -116,8 +116,12 @@
                     </tr></thead>
                     <tbody style="clear: both">
                         
+                        
+                        
                         <% unless @properties.blank? %>
                               <% @properties.each do |property| %>
+                              
+                              
                                 <tr>
                                     <td colspan="2">
                                         <h3><%= property.title %></h3>
@@ -133,7 +137,9 @@
                                         <br>
                                     </td>
                                     <td class="flyer">
-                                        <%= link_to "Download Flyer", "test" %>
+                                        <% unless property.flyer_id.blank? %>
+                                            <%= link_to image_tag("pdf.png"), Refinery::Resource.find(property.flyer_id).url %>
+                                        <% end %>
                                     </td>
                                 </tr>
                               <% end %>

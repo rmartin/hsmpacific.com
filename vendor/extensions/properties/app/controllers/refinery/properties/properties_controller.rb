@@ -22,7 +22,7 @@ module Refinery
     protected
 
       def find_all_properties
-        @properties = Property.order('position ASC')
+        @properties = Property.order('title ASC')
       end
 
       def find_page

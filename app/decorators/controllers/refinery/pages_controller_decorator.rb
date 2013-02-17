@@ -20,7 +20,7 @@ Refinery::PagesController.class_eval do
       end
       
       def find_all_properties
-        @properties = Refinery::Properties::Property.all
+        @properties = Refinery::Properties::Property.order("title ASC")
       end
       
 

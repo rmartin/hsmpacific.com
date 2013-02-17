@@ -7,7 +7,9 @@ module Refinery
         before_filter :find_all_area_codes
         before_filter :find_all_brokers
 
-        crudify :'refinery/properties/property', :xhr_paging => true
+        crudify :'refinery/properties/property', :xhr_paging => true,
+                                          :order => "title ASC",
+                                          :sortable => false
         
         protected
         
