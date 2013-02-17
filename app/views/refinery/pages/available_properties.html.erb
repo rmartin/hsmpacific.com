@@ -125,15 +125,15 @@
                                 <tr>
                                     <td colspan="2">
                                         <h3><%= property.title %></h3>
-                                        <p>  
+                                        <p style="display: inline">  
                                             <% unless property.available_sf.blank? %>
-                                                <b>Available SF:</b> <%= property.available_sf %><br>
+                                                <b>Available SF:</b> <%= raw(property.available_sf) %><br>
                                             <% end %>
                                             <% unless property.rates.blank? %>
-                                                <b>Rates:</b> <%= property.rates %>
+                                                <b>Rates:</b> <%= raw(property.rates) %>
                                             <% end %>
                                             <% unless property.highlights.blank? %>
-                                                <br /><b>Highlights:</b> <%= property.highlights %>
+                                                <br /><b style="float: left">Highlights:</b> <%= raw(property.highlights) %>
                                             <% end %>
                                                  
                                         </p>
