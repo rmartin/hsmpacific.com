@@ -126,8 +126,16 @@
                                     <td colspan="2">
                                         <h3><%= property.title %></h3>
                                         <p>  
-                                            <b>Available SF:</b><%= property.available_sf %><br>
-                                            <b>Rates:</b><%= property.rates %>     
+                                            <% unless property.available_sf.blank? %>
+                                                <b>Available SF:</b> <%= property.available_sf %><br>
+                                            <% end %>
+                                            <% unless property.rates.blank? %>
+                                                <b>Rates:</b> <%= property.rates %>
+                                            <% end %>
+                                            <% unless property.highlights.blank? %>
+                                                <br /><b>Highlights:</b> <%= property.highlights %>
+                                            <% end %>
+                                                 
                                         </p>
                                     </td>
                                     <td class="contact">
