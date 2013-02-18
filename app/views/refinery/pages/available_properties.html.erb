@@ -40,7 +40,7 @@
                             <label>
                                 Sale / Lease:
                             </label>
-                            <%= select :filter, :property_type, @propertyTypes.each_with_index.map {|name, index| [name,index]}, {:prompt => 'All', :selected => (@filterParams == nil) ? 0 : @filterParams['property_type']} %>
+                            <%= select :filter, :property_type, @propertyTypes.each_with_index.map {|name, index| [name,name]}, {:prompt => 'All', :selected => (@filterParams == nil) ? 0 : @filterParams['property_type']} %>
                         </div>
                     </div>
                     <div class="group">
@@ -48,13 +48,13 @@
                             <label>
                                 State:
                             </label>
-                            <%= select :filter, :state_code, @stateCodes.each_with_index.map {|name, index| [name,index]}, {:prompt => 'All', :selected => (@filterParams == nil) ? 0 : @filterParams['state_code']} %>
+                            <%= select :filter, :state_code, @stateCodes.each_with_index.map {|name, index| [name,name]}, {:prompt => 'All', :selected => (@filterParams == nil) ? 0 : @filterParams['state_code']} %>
                         </div>
                         <div>
                             <label>
                                 Sort By:
                             </label>
-                            <%= select :filter, :sort_by, @sortBy.each_with_index.map {|name, index| [name,index]}, {:selected => (@filterParams == nil) ? 0 : @filterParams['sort_by']} %>
+                            <%= select :filter, :sort_by, @sortBy.each_with_index.map {|name, index| [name,name]}, {:selected => (@filterParams == nil) ? 0 : @filterParams['sort_by']} %>
                         </div>
                     </div>
                     
