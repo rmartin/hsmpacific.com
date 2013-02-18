@@ -5,7 +5,7 @@
 			    <%=raw @broker.bio %>
 			</section>
 			<h3>Available Properties</h3>		
-			<p><a href="/?event=page.properties&keyword=<%=raw @broker.urlpath %>">View <%=raw @broker.name.split(" ")[1] %>'s available properties</a></p>
+			<p><a href="/available-properties?filter%5Bproperty_broker_id%5D=<%=raw @broker.id %>">View <%=raw @broker.name.split(" ")[1] %>'s available properties</a></p>
 		</div>
 
 		<div class="grid_4 profile_right" >
@@ -16,7 +16,7 @@
 			   <%=raw @broker.phone %> Phone<br />
 			   <%=raw @broker.fax %> Fax	<br />
 			</p>
-			<p><a href="/?event=page.properties&keyword=<%=raw @broker.urlpath %>">View <%=raw @broker.name.split(" ")[1] %>'s available properties</a></p>
+			<p><a href="/available-properties?filter%5Bproperty_broker_id%5D=<%=raw @broker.id %>">View <%=raw @broker.name.split(" ")[1] %>'s available properties</a></p>
 		</div>
 		 <p>&nbsp;</p>
 		 <div class="clear"></div>
