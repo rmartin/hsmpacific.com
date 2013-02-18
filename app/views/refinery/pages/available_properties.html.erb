@@ -6,36 +6,27 @@
             <div class="property_listing">
                 <div class="grid_12 profile_left">
                 <h3>Search</h3>
-    
-                <form class="property_search" action="/?event=page.properties" method="post">
+                
+                <%= form_tag("/available-properties", {:method => "get", :class => "property_search"}) do %>
+                
                     <div class="keyword group">
                         <label>
                             Keyword:
                         </label>
-                        <input type="text" size="40" name="keyword" value="">
+                        <input type="text" size="40" name="filter[keyword]" value="<%=raw (@filterParams == nil) ? '' : @filterParams['keyword'] %>" />
                     </div>
                     <div class="group">
                         <div>
                             <label>
                                 City:
                             </label>
-                            <select name="city_code" class="input_select">
-                                <option value="">All</option>
-                                
-                                 
-                                
-                            </select>
+                            <%= collection_select(:filter, :city_id, @cities.all, :id, :name, {:prompt => 'All', :selected => (@filterParams == nil) ? 0 : @filterParams['city_id'] }) %>
                         </div>
                         <div>
                             <label>
                                 Area:
                             </label>
-                            <select name="area_code" class="input_select">
-                            <option value="">All</option>
-                            
-                              
-                            
-                        </select>
+                            <%= collection_select(:filter, :area_code_id, @areaCodes.all, :id, :name, {:prompt => 'All', :selected => (@filterParams == nil) ? 0 : @filterParams['area_code_id'] }) %>
                         </div>
                     </div>
                     <div class="group">
@@ -43,23 +34,13 @@
                             <label>
                                 Broker:
                             </label>
-                            <select name="broker_id" class="input_select">
-                                <option value="">All</option>
-                                
-                                   
-                                
-                            </select>
+                            <%= collection_select(:filter, :property_broker_id, @brokers, :id, :name, {:prompt => 'All', :selected => (@filterParams == nil) ? 0 : @filterParams['property_broker_id'] }) %>
                         </div>
                         <div>
                             <label>
                                 Sale / Lease:
                             </label>
-                            <select name="property_type" class="input_select">
-                                <option value="">All</option>
-                                
-            
-                                
-                            </select>
+                            <%= select :filter, :property_type, @propertyTypes.each_with_index.map {|name, index| [name,index]}, {:prompt => 'All', :selected => (@filterParams == nil) ? 0 : @filterParams['property_type']} %>
                         </div>
                     </div>
                     <div class="group">
@@ -67,37 +48,21 @@
                             <label>
                                 State:
                             </label>
-                            <select name="state_code" class="input_select">
-                                <option value="">All</option>
-                                
-            
-                                
-                            </select>
+                            <%= select :filter, :state_code, @stateCodes.each_with_index.map {|name, index| [name,index]}, {:prompt => 'All', :selected => (@filterParams == nil) ? 0 : @filterParams['state_code']} %>
                         </div>
                         <div>
                             <label>
                                 Sort By:
                             </label>
-                            
-                            <select name="sort_by" class="input_select">
-                                
-                                    <option value="title" selected="selected">Title</option>
-                                    
-                                    <option value="city_code">City</option>
-                                    
-                                    <option value="area_code">Area</option>
-                                    
-                                    <option value="state_code">State</option>
-                                    
-                            </select>
+                            <%= select :filter, :sort_by, @sortBy.each_with_index.map {|name, index| [name,index]}, {:selected => (@filterParams == nil) ? 0 : @filterParams['sort_by']} %>
                         </div>
                     </div>
                     
                     <div style="margin-top: 12px">
-                        <input type="submit" class="submit" value="Search">
+                        <%= submit_tag("Search", {:class => "submit"}) %>
                         
                     </div>
-                </form>
+                <% end %>
             </div>
   
         <div class="grid_12 project" style=" margin: 10px;">
