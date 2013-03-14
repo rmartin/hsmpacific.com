@@ -3,20 +3,20 @@ Refinery::PagesController.class_eval do
     before_filter :find_all_brokers, :only => [:show]
     before_filter :find_all_tenants, :only => [:show]
     before_filter :find_exclusive_tenants, :only => [:home]
-    before_filter :find_all_properties, :onluy => [:"Avaiable Properties"]
+    before_filter :find_all_properties, :only => [:"Avaiable Properties"]
   
     protected
     
       def find_all_brokers
-        @brokers = Refinery::Brokers::Broker.all
+        @brokers = Refinery::Brokers::Broker.order("position ASC");
       end
       
       def find_all_tenants
-        @tenants = Refinery::Tenants::Tenant.all
+        @tenants = Refinery::Tenants::Tenant.order('name ASC')
       end
       
       def find_exclusive_tenants
-        @exclusiveTenants = Refinery::Tenants::Tenant.where(:is_exclusive_tenant => true)
+        @exclusiveTenants = Refinery::Tenants::Tenant.where(:is_exclusive_tenant => true).order('name ASC')
       end
       
       def find_all_properties

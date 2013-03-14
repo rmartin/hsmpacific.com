@@ -7,7 +7,10 @@ module Refinery
         #before_filter :check_broker_ids, :only => [:update]
 
         crudify :'refinery/tenants/tenant',
-                :title_attribute => 'name', :xhr_paging => true
+                :title_attribute => 'name',
+                :xhr_paging => true,  
+                :order => "name ASC",
+                :sortable => false
                     
                         
         protected

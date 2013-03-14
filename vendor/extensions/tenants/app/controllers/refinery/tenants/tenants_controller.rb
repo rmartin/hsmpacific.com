@@ -22,7 +22,7 @@ module Refinery
     protected
 
       def find_all_tenants
-        @tenants = Tenant.order('position ASC')
+        @tenants = Tenant.order('name ASC')
       end
 
       def find_page
