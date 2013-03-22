@@ -1,6 +1,6 @@
 Refinery::PagesController.class_eval do
 
-    before_filter :find_all_brokers, :only => [:show]
+    before_filter :find_all_brokers, :only => [:contact_us]
     before_filter :find_all_tenants, :only => [:show]
     before_filter :find_exclusive_tenants, :only => [:home]
     before_filter :find_all_properties, :only => [:show]
