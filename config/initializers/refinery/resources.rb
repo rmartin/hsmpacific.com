@@ -17,11 +17,5 @@ Refinery::Resources.configure do |config|
   # config.s3_secret_access_key = ENV['S3_SECRET']
   # config.s3_region = ENV['S3_REGION]
 
-  # Configure Dragonfly
-  # This is where in the middleware stack to insert the Dragonfly middleware
-  # config.dragonfly_insert_before = "ActionDispatch::Callbacks"
-  # config.dragonfly_secret = "d174dc8374904bd26efeee30c34bc7706b542581e13af9f2"
-  # config.dragonfly_url_format = "/system/resources/:job/:basename.:format"
-  # config.datastore_root_path = "/Users/roymartin2/Code/www/hsmpacific_com/public/system/refinery/resources"
-
+ 
 end

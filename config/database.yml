@@ -21,8 +21,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: dbiiiie8jm13fs
-  port: 5432
-  host: ec2-54-243-213-213.compute-1.amazonaws.com
-  username: prxrqgdsrvssms
-  password: KWsdsUfXwtbCE_itDEqcNpsCPr
+  database: ENV['DB_DATABASE']
+  port: ENV['DB_PORT']
+  host: ENV['DB_HOST']
+  username: ENV['DB_USERNAME']
+  password: ENV['DB_PASSWORD']

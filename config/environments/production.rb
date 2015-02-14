@@ -68,8 +68,8 @@ end
 
 Refinery::Core.configure do |config|
   config.s3_backend = true
-  config.s3_access_key_id = 'AKIAI2O5WMQXP44JGDKA'
-  config.s3_secret_access_key = '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'
+  config.s3_access_key_id = ENV['S3_KEY']
+  config.s3_secret_access_key = ENV['S3_SECRET']
   config.s3_bucket_name = 'hsmpacific'
   config.s3_region = 'us-east-1' # this one's not always required, default is 'us-east-1'
 end
