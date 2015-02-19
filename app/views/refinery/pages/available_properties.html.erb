@@ -1,14 +1,14 @@
-<div class="container_12"> 
+<div class="container_12">
     <div id="innerContent" class="">
         <section id='body_content' class="grid_12">
             <%=raw @page.content_for(:body) %>
-                
+
             <div class="property_listing">
                 <div class="grid_12 profile_left">
                 <h3>Search</h3>
-                
+
                 <%= form_tag("/available-properties", {:method => "get", :class => "property_search"}) do %>
-                
+
                     <div class="keyword group">
                         <label>
                             Keyword:
@@ -57,16 +57,16 @@
                             <%= select :filter, :sort_by, @sortBy.each_with_index.map {|name, index| [name,name]}, {:selected => (@filterParams == nil) ? 0 : @filterParams['sort_by']} %>
                         </div>
                     </div>
-                    
+
                     <div style="margin-top: 12px">
                         <%= submit_tag("Search", {:class => "submit"}) %>
-                        
+
                     </div>
                 <% end %>
             </div>
-  
+
         <div class="grid_12 project" style=" margin: 10px;">
-    
+
                 <table>
                     <thead>
                         <tr><th colspan="2" class="property">
@@ -80,17 +80,17 @@
                         </th>
                     </tr></thead>
                     <tbody style="clear: both">
-                        
-                        
-                        
+
+
+
                         <% unless @properties.blank? %>
                               <% @properties.each do |property| %>
-                              
-                              
+
+
                                 <tr>
                                     <td colspan="2">
                                         <h3><%= property.title %></h3>
-                                        <p style="display: inline">  
+                                        <p style="display: inline">
                                             <% unless property.available_sf.blank? %>
                                                 <b>Available SF:</b> <%= raw(property.available_sf) %><br>
                                             <% end %>
@@ -100,7 +100,7 @@
                                             <% unless property.highlights.blank? %>
                                                 <br /><b style="float: left">Highlights:</b> <%= raw(property.highlights) %>
                                             <% end %>
-                                                 
+
                                         </p>
                                     </td>
                                     <td class="contact">
