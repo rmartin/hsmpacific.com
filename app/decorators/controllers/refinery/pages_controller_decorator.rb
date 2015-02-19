@@ -35,7 +35,9 @@ Refinery::PagesController.class_eval do
         #filter parameters
         @filterParams = params[:filter]
 
-        if @filterParams['sort_by'] != nil and @filterParams['sort_by'] != ''
+        if @filterParams != nil
+
+          if @filterParams['sort_by'] != nil and @filterParams['sort_by'] != ''
             if @filterParams['sort_by'] == 'Title'
               @properties = Refinery::Properties::Property.order("title ASC");
             elsif @filterParams['sort_by'] == 'City'
@@ -45,9 +47,9 @@ Refinery::PagesController.class_eval do
             elsif @filterParams['sort_by'] == 'State'
               @properties = Refinery::Properties::Property.order("state_code ASC");
             end
-        end
+          end
 
-        if @filterParams != nil
+
           if @filterParams['keyword'] != nil and @filterParams['keyword'] != ''
             @properties = @properties.where("lower(title) LIKE ? OR lower(highlights) LIKE ?", "%" + @filterParams['keyword'].strip.downcase + "%", "%" + @filterParams['keyword'].strip.downcase + "%")
           end
