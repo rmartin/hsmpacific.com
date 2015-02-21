@@ -37,29 +37,12 @@ Refinery::PagesController.class_eval do
 
         if @filterParams != nil
 
-          if @filterParams['sort_by'] != nil and @filterParams['sort_by'] != ''
-            if @filterParams['sort_by'] == 'Title'
-              @properties = Refinery::Properties::Property.order("title ASC");
-            elsif @filterParams['sort_by'] == 'City'
-              @properties = Refinery::Properties::Property.order("city_id ASC");
-            elsif @filterParams['sort_by'] == 'Area'
-              @properties = Refinery::Properties::Property.order("area_code_id ASC");
-            elsif @filterParams['sort_by'] == 'State'
-              @properties = Refinery::Properties::Property.order("state_code ASC");
-            end
-          end
-
-
           if @filterParams['keyword'] != nil and @filterParams['keyword'] != ''
             @properties = @properties.where("lower(title) LIKE ? OR lower(highlights) LIKE ?", "%" + @filterParams['keyword'].strip.downcase + "%", "%" + @filterParams['keyword'].strip.downcase + "%")
           end
 
           if @filterParams['city_id'] != nil and @filterParams['city_id'] != ''
             @properties = @properties.where("city_id = ?", @filterParams['city_id'])
-          end
-
-          if @filterParams['state_code'] != nil and @filterParams['state_code'] != ''
-            @properties = @properties.where("state_code = ?", @filterParams['state_code'])
           end
 
           if @filterParams['area_code_id'] != nil and @filterParams['area_code_id'] != ''
@@ -71,6 +54,25 @@ Refinery::PagesController.class_eval do
             @properties = @properties.where("broker_id = ?", @filterParams['property_broker_id'])
           end
 
+          if @filterParams['property_type'] != nil and @filterParams['property_type'] != ''
+            @properties = @properties.where("property_type = ?", @filterParams['property_type'])
+          end
+
+          if @filterParams['state_code'] != nil and @filterParams['state_code'] != ''
+            @properties = @properties.where("state_code = ?", @filterParams['state_code'])
+          end
+
+          if @filterParams['sort_by'] != nil and @filterParams['sort_by'] != ''
+            if @filterParams['sort_by'] == 'Title'
+              @properties = Refinery::Properties::Property.order("title ASC");
+            elsif @filterParams['sort_by'] == 'City'
+              @properties = Refinery::Properties::Property.order("city_id ASC");
+            elsif @filterParams['sort_by'] == 'Area'
+              @properties = Refinery::Properties::Property.order("area_code_id ASC");
+            elsif @filterParams['sort_by'] == 'State'
+              @properties = Refinery::Properties::Property.order("state_code ASC");
+            end
+          end
 
         end
 
