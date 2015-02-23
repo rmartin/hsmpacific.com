@@ -4,15 +4,15 @@
 		<div  class="slider-frame">
 	    <div class="main_view">
 	      <div class="window">
-	        <div class="image_reel" id="slider"> 
+	        <div class="image_reel" id="slider">
 				<% @page.images.each_with_index do |image, index| %>
 				        <%= link_to image_tag(image.thumbnail("960x348#c").url), image.thumbnail("960x348").url %>
 				   <% end %>
 	        </div>
 	      </div>
-	      <div class="paging"> 
+	      <div class="paging">
 			<% @page.images.each_with_index do |image, index| %>
-	      		<a href="##" rel="<%= index+1 %>"><%= index+1 %></a> 
+	      		<a href="##" rel="<%= index+1 %>"><%= index+1 %></a>
 			<% end %>
 	      </div>
 	    </div>
@@ -21,29 +21,13 @@
 
 		  <!--<div class="grid_12"> <img src="/assets/shadow-divider-1.png" width="927" height="47" alt="Shadow" class="hr-divider"/></div>-->
 		  <!-- end .grid_12 -->
-		  <div class="grid_6"> 
-			<%=raw @page.content_for(:side_body) %>	
+		  <div class="grid_6">
+			<%=raw @page.content_for(:side_body) %>
 		  </div>
 		  <!-- end .grid_6 -->
 		  <div class="grid_6 mission_statement">
 			<%=raw @page.content_for(:body) %>
-		  
-		  </div>
-		  <!-- end .grid_6 -->
-		  <div class="grid_12">
 
-			<h3>Exclusive Retailers</h3>
-			<div id="outerContainer">
-				<div id="imageScroller">
-					<div id="viewer" class="js-disabled">
-						<% unless @exclusiveTenants.blank? %>
-							<% @exclusiveTenants.each do |tenant| %>
-								<%= link_to (image_fu tenant.logo, "271x110>"), ::Refinery::Page.find(16).url %>	
-							<% end %>
-						<% end %>	
-					</div>
-				</div>
-			</div>
 		  </div>
 		  <p>&nbsp;</p>
 		  <div class="clear"></div>
