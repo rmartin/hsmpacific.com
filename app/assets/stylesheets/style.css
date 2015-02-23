@@ -393,7 +393,7 @@ body.choc{
 	}
 
 
-/* WHITE FOOTER : To switch to white footer add 'white' to the footer_bg div class*/	
+/* WHITE FOOTER : To switch to white footer add 'white' to the footer_bg div class*/
 .footer_bg.white {background-image: url(/assets/footer_bg_white.png);background-position: top;}
 .footer_bg.white h4 {color: #000;}
 .footer_bg.white h5 {color: #333;}
@@ -577,7 +577,7 @@ ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul {
 	color:#fff;
 	outline:		0;
 }
-/* Active Page Status CSS for all the browsers*/	
+/* Active Page Status CSS for all the browsers*/
 .sf-menu li.current-cat a, .sf-menu li.current_page_item a {
 	color:#dbdbdb;
 }
@@ -623,7 +623,7 @@ ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul {
 	height:348px;
 	overflow:hidden;
 }
-/* numeric controls */	
+/* numeric controls */
 
 	ol#controls {
 	margin:1em 0;
@@ -688,7 +688,7 @@ h2 .tag {
 #CommentForm fieldset legend	{ display: none; }
 #CommentForm div 				{
 	margin-bottom: 10px;
-}		
+}
 #CommentForm .textInput			{
 	width: 196px;
 	margin: 0;
@@ -699,7 +699,7 @@ h2 .tag {
 	padding-right: 10px;
 	padding-left: 10px;
 	color: #969696;
-}	
+}
 #CommentForm .submit {
 	border: 0;
 	float: right;
@@ -735,7 +735,7 @@ h2 .tag {
 	overflow:hidden;
 	overflow-y: hidden;
 	overflow-x: hidden;
-}	
+}
 
 .portfolio .thumb {
 	height: 120px;
@@ -746,7 +746,7 @@ h2 .tag {
 	background-repeat: no-repeat;
 	margin: 0px 10px 20px 0px;
 	-ms-interpolation-mode: bicubic;
-	position: relative; 
+	position: relative;
 }
 
 .portfolio .thumb img:hover {
@@ -770,11 +770,10 @@ h2 .tag {
 
 .portfolio .thumb img{
 	display:block;
-	position:absolute;
 	top:0;
 	bottom:0;
 	margin: auto;
-}	
+}
 
 .portfolio-sections {
 	height: 50px;
@@ -818,7 +817,7 @@ h2 .tag {
 	font-size: 10px;
 	margin-top: -15px;
 	margin-bottom:20px;
-	color: #999;	
+	color: #999;
 }
 */
 
@@ -880,7 +879,7 @@ h2 .tag {
 .headshot_listing div.headshot img{
 	text-align: center;
 	display: block;
-	margin: 0 auto;	
+	margin: 0 auto;
 	border: 5px solid black;
 	margin-bottom: 8px;
 }
@@ -907,7 +906,7 @@ h2 .tag {
 .broker_profile .profile_right .contact-info{
 	width: 200px;
 	text-align: left;
-	margin-left: 62px;	
+	margin-left: 62px;
 }
 
 .broker_profile ol, .broker_profile ul{
@@ -929,7 +928,7 @@ h2 .tag {
 }
 
 .featured_projects .project span{
-	display: block;	
+	display: block;
 }
 
 .portfolio.gallery .portfolio_row{
@@ -938,7 +937,7 @@ h2 .tag {
 }
 
 .property_listing .project{
-	margin: 10px 0px;	
+	margin: 10px 0px;
 }
 
 .property_listing .project img{
@@ -980,7 +979,7 @@ h2 .tag {
 
 .property_listing .project table thead th.property{
 	width: 550px;
-	padding-left: 10px;	
+	padding-left: 10px;
 }
 
 .property_listing .project table tbody td{
@@ -1002,7 +1001,7 @@ h2 .tag {
 	padding: 40px 0px 0px 0px;
 }
 
-.property_listing .property_search { 
+.property_listing .property_search {
 	width: 600px;
 }
 
@@ -1018,7 +1017,7 @@ h2 .tag {
 
 
 .property_listing .property_search label{
-	display: block; 
+	display: block;
 	width: 100px;
 	float: left;
 }
