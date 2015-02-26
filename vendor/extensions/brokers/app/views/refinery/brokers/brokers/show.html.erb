@@ -1,15 +1,15 @@
-<div class="container_12"> 
+<div class="container_12">
 	<div id="innerContent" class="">
 		<div class="grid_8 profile_left">
 			<section>
 			    <%=raw @broker.bio %>
 			</section>
-			<h3>Available Properties</h3>		
+			<h3>Available Properties</h3>
 			<p><a href="/available-properties?filter%5Bproperty_broker_id%5D=<%=raw @broker.id %>">View <%=raw @broker.name.split(" ")[1] %>'s available properties</a></p>
 		</div>
 
 		<div class="grid_4 profile_right" >
-			<%= image_fu @broker.headshot %><br />
+			<%= image_fu(@broker.headshot, '137x205') %><br />
 			<span><%=raw @broker.name %></span>
 			<p><%=raw @broker.title %></p>
 			<p><a href="mailto:<%=raw @broker.email %>"><%=raw @broker.email %></a><br />

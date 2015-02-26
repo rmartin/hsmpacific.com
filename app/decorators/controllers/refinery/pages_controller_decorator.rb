@@ -65,13 +65,13 @@ Refinery::PagesController.class_eval do
 
           if @filterParams['sort_by'] != nil and @filterParams['sort_by'] != ''
             if @filterParams['sort_by'] == 'Title'
-              @properties = Refinery::Properties::Property.order("title ASC");
+              @properties = @properties.order("title ASC");
             elsif @filterParams['sort_by'] == 'City'
-              @properties = Refinery::Properties::Property.order("city_id ASC");
+              @properties = @properties.order("city_id ASC");
             elsif @filterParams['sort_by'] == 'Area'
-              @properties = Refinery::Properties::Property.order("area_code_id ASC");
+              @properties = @properties.order("area_code_id ASC");
             elsif @filterParams['sort_by'] == 'State'
-              @properties = Refinery::Properties::Property.order("state_code ASC");
+              @properties = @properties.order("state_code ASC");
             end
           end
 

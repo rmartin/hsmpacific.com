@@ -43,6 +43,7 @@ gem 'actionmailer', '3.2.21'
 # Refinery CMS
 gem 'refinerycms', '~> 2.1.5'
 gem 'acts_as_indexed', '0.8.3'
+gem 'psych', '2.0.13'
 
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-authentication', '~> 2.1.5'
