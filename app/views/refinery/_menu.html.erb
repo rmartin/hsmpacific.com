@@ -4,19 +4,14 @@
   if (roots = local_assigns[:roots] || (collection ||= refinery_menu_pages).roots).present?
     dom_id ||= 'menu'
     css = [(css || 'menu clearfix')].flatten.join(' ')
-    hide_children = false
 -%>
 <div class="container_12">
-<div class="navigation-wrap">
-    <div class="nav-right-corner"></div>
-<nav id='<%= dom_id %>' class='<%= css %>'>
-  <ul class="sf-menu">
-    
-  </ul>
-</nav>
-<div class="nav-left-corner"></div>
- </div>
- <!-- /NAVIGATION -->
- <div class="clear"></div>
+    <div class="navigation-wrap">
+        <div class="nav-right-corner"></div>
+        <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
+        <div class="nav-left-corner"></div>
+    </div>
+    <!-- /NAVIGATION -->
+    <div class="clear"></div>
 </div>
 <% end -%>

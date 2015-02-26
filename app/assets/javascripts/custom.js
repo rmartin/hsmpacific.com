@@ -1,7 +1,7 @@
 // initialise plugins for Superfish Top Menu
-jQuery(function(){
-    jQuery('ul.sf-menu').superfish();
-});
+// jQuery(function(){
+//     jQuery('ul.sf-menu').superfish();
+// });
 
 
 // initialise custom font settings
@@ -35,7 +35,7 @@ Cufon.replace('.button-2', {
 //Cufon.replace('.sf-menu a', { fontFamily: 'myriad' });
 
 
-// Gallery image hover	
+// Gallery image hover
 function portfolio_img_hover($hover_class){
     jQuery('.' + $hover_class).hover(function(){
         jQuery(this).find('.hover_fade').stop().animate({
@@ -50,12 +50,12 @@ function portfolio_img_hover($hover_class){
 */
 
 
-//Larger thumbnail preview 
+//Larger thumbnail preview
 $(".thumb").hover(function() {
 	$(this).css({'z-index' : '10'});
 	$(this).addClass("hover").stop()
 	$(this).find('img').hide().stop()
-		
+
 	} , function() {
 	$(this).css({'z-index' : '0'});
 	$(this).removeClass("hover").stop()
@@ -132,17 +132,17 @@ $(document).ready(function(){
     //Show the paging and activate its first link
     $(".paging").show();
     $(".paging a:first").addClass("active");
-    
+
     //Get size of the image, how many images there are, then determin the size of the image reel.
     var imageWidth = $(".window").width();
     var imageSum = $(".image_reel img").size();
     var imageReelWidth = imageWidth * imageSum;
-    
+
     //Adjust the image reel to its new size
     $(".image_reel").css({
         'width': imageReelWidth
     });
-    
+
     //Paging  and Slider Function
     rotate = function(){
         var triggerID = $active.attr("rel") - 1; //Get number of times to slide
@@ -153,9 +153,9 @@ $(document).ready(function(){
         $(".image_reel").animate({
             left: -image_reelPosition
         }, 500);
-        
+
     };
-    
+
     //Rotation  and Timing Event
     rotateSwitch = function(){
         play = setInterval(function(){ //Set timer - this will repeat itself every 7 seconds
@@ -166,7 +166,7 @@ $(document).ready(function(){
             rotate(); //Trigger the paging and slider function
         }, 8000); //Timer speed in milliseconds (8 seconds)
     };
-    
+
     rotateSwitch(); //Run function on launch
     //On Hover
     $(".image_reel a").hover(function(){
@@ -174,7 +174,7 @@ $(document).ready(function(){
     }, function(){
         rotateSwitch(); //Resume rotation timer
     });
-    
+
     //On Click
     $(".paging a").click(function(){
         $active = $(this); //Activate the clicked paging

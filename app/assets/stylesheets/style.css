@@ -409,6 +409,11 @@ body.choc{
 
 
 /* MAIN NAVIGATION */
+
+.navigation-wrap section:after{
+	content: '';
+	display: inline;
+}
 .navigation {
 	background-image: url(/assets/navigation-bg.png);
 	background-repeat: repeat-x;

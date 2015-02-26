@@ -1,5 +1,3 @@
-(Refinery.i18n_enabled? ? Refinery::I18n.frontend_locales : [:en]).each do |lang|
-  I18n.locale = lang
 
   if defined?(Refinery::User)
     Refinery::User.all.each do |user|
@@ -22,4 +20,3 @@
       page.parts.create(:title => default_page_part, :body => nil, :position => index)
     end
   end
-end

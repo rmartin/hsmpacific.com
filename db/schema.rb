@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130108062848) do
+ActiveRecord::Schema.define(:version => 20150226072436) do
 
   create_table "property_representations", :force => true do |t|
     t.integer  "broker_id"
@@ -63,7 +63,6 @@ ActiveRecord::Schema.define(:version => 20130108062848) do
     t.integer  "image_width"
     t.integer  "image_height"
     t.string   "image_uid"
-    t.string   "image_ext"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
@@ -213,22 +212,22 @@ ActiveRecord::Schema.define(:version => 20130108062848) do
     t.datetime "reset_password_sent_at"
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
+    t.string   "slug"
   end
 
-  add_index "refinery_users", ["id"], :name => "index_refinery_users_on_id"
+  add_index "refinery_users", ["slug"], :name => "index_refinery_users_on_slug"
 
   create_table "seo_meta", :force => true do |t|
     t.integer  "seo_meta_id"
     t.string   "seo_meta_type"
     t.string   "browser_title"
-    t.string   "meta_keywords"
     t.text     "meta_description"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end
 
   add_index "seo_meta", ["id"], :name => "index_seo_meta_on_id"
-  add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], :name => "index_seo_meta_on_seo_meta_id_and_seo_meta_type"
+  add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], :name => "id_type_index_on_seo_meta"
 
   create_table "tenant_representations", :force => true do |t|
     t.integer  "broker_id"
