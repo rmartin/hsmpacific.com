@@ -16,7 +16,8 @@ Refinery::PagesController.class_eval do
       end
 
       def find_exclusive_tenants
-        @exclusiveTenants = Refinery::Tenants::Tenant.where(:is_exclusive_tenant => true).order('name ASC')
+        # @exclusiveTenants = Refinery::Tenants::Tenant.where(:is_exclusive_tenant => true).order('name ASC')
+        # @exclusiveTenants = Refinery::Tenants::Tenant.order('name ASC')
       end
 
       def find_all_properties
